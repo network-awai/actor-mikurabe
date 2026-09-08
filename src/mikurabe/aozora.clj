@@ -17,7 +17,7 @@
   when this publisher IS wired, mikurabe.operation's phase + named-party
   gates still decide whether any given record is ever handed to it at
   all — this namespace has no independent authority to bypass those gates."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [mikurabe.cacao :as cacao]
             [mikurabe.publisher :as publisher])
   (:import [java.net URI]
@@ -33,7 +33,7 @@
   [{:keys [url method headers body]}]
   (let [b (HttpRequest/newBuilder (URI/create url))]
     (doseq [[k v] headers] (.header b k v))
-    (let [req  (-> b (.method (str/upper-case (name (or method :post)))
+    (let [req  (-> b (.method (str/upper (name (or method :post)))
                              (if body
                                (HttpRequest$BodyPublishers/ofString body)
                                (HttpRequest$BodyPublishers/noBody)))

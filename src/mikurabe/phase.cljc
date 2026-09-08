@@ -33,7 +33,7 @@
   `mikurabe.governor` — the governor's HARD/SOFT gates are about the
   observation's *content*; this module is about *who is authorized to see it
   published and when*)."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def phases
   {0 {:label "observe"                          :publish? false}
@@ -82,8 +82,8 @@
   `mikurabe.advisor`), so this only trips when an advisor's proposal text
   actually composes a named comparison."
   [text items]
-  (let [t (str/lower-case (or text ""))]
-    (boolean (some #(str/includes? t (str/lower-case %))
+  (let [t (str/lower (or text ""))]
+    (boolean (some #(str/includes? t (str/lower %))
                    (distinct-party-strings items)))))
 
 (defn observations-name-party?

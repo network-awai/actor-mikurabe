@@ -23,7 +23,7 @@
   `load-or-create-identity!`/`mint` unless an operator explicitly wires
   `mikurabe.aozora/aozora-publisher` in — see README/MATURITY."
   (:require [clojure.edn :as edn]
-            [clojure.string :as str])
+            [kotoba.lang.text :as str])
   (:import [java.security KeyPairGenerator MessageDigest Signature KeyFactory]
            [java.security.spec PKCS8EncodedKeySpec X509EncodedKeySpec]
            [java.io ByteArrayOutputStream]
