@@ -35,7 +35,7 @@
                                                                           ├ escalate ──────▶ request-approval [interrupt-before]
                                                                           │                    resume ─▶ commit | hold
                                                                           └ hold ──────────▶ END"
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [langgraph.graph :as g]
             [langgraph.checkpoint :as cp]
             [mikurabe.advisor :as advisor]

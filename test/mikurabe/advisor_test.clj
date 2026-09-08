@@ -4,7 +4,7 @@
   produce governor-clean citations (≥2 distinct item-ids per observation,
   every technique in the published enum, never a poisoned entity-verdict
   field) and must never invent a citation to something outside its input."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is testing]]
             [mikurabe.advisor :as advisor]
             [mikurabe.governor :as governor]))
@@ -57,8 +57,8 @@
           party-strings ["Outlet-A" "Outlet-B" "Country-A" "Country-B"]]
       (doseq [o (:observations p)]
         (is (not (some #(str/includes?
-                         (str/lower-case (:description o))
-                         (str/lower-case %))
+                         (str/lower (:description o))
+                         (str/lower %))
                        party-strings)))))))
 
 (deftest mock-advisor-proposal-passes-the-governor-clean-when-2-items

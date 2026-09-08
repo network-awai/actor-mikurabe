@@ -56,7 +56,7 @@
   (`mikurabe.phase`), because it is about WHO may see a governor-clean
   observation published and WHEN, not about whether the observation's
   content is safe to have generated at all."
-  (:require [clojure.string :as str]))
+  (:require [kotoba.lang.text :as str]))
 
 (def confidence-floor 0.4)
 

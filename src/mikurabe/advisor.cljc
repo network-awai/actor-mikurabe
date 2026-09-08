@@ -33,7 +33,7 @@
      :effect      :assessment   ; mikurabe only ever assesses, never actuates
      :confidence  0..1}"
   (:require [clojure.set :as set]
-            [clojure.string :as str]))
+            [kotoba.lang.text :as str]))
 
 (defprotocol Advisor
   (-frame [advisor store request] "store + request (topic-cluster) → proposal map"))
@@ -41,7 +41,7 @@
 ;; ───────────────────────── mock heuristics (no NLP, keyword/text-diff only) ─
 
 (defn- tokenize [s]
-  (->> (str/split (str/lower-case (or s "")) #"[^a-z0-9\p{L}]+")
+  (->> (str/split (str/lower (or s "")) #"[^a-z0-9\p{L}]+")
        (remove str/blank?)
        set))
 
@@ -57,7 +57,7 @@
    "reported by" "witnesses said"])
 
 (defn- has-attribution? [excerpt]
-  (let [e (str/lower-case (or excerpt ""))]
+  (let [e (str/lower (or excerpt ""))]
     (boolean (some #(str/includes? e %) attribution-markers))))
 
 (defn- loaded-words-in [excerpt]
@@ -97,7 +97,7 @@
   (when (>= (count items) 2)
     (let [[a b] (take 2 items)]
       (when (and (:headline a) (:headline b)
-                 (not= (str/lower-case (:headline a)) (str/lower-case (:headline b))))
+                 (not= (str/lower (:headline a)) (str/lower (:headline b))))
         {:technique :emphasis-divergence
          :description "the compared accounts lead with a different fact/frame in the headline for the same underlying story"
          :cites [(mk-cite a) (mk-cite b)]
