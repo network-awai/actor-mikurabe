@@ -14,7 +14,7 @@ categories below. **New categories require this same open-method
 publication discipline before use** — a closed or undocumented technique
 value is not just discouraged, `mikurabe.governor/technique-enum` makes it
 impossible for the mock advisor's output to be considered valid by any
-test that checks membership (see `test/mikurabe/advisor_test.clj`
+test that checks membership (see `test/mikurabe/advisor_test.cljk`
 `every-observation-technique-is-in-the-published-enum`).
 
 ## v1 categories
@@ -35,7 +35,7 @@ None of the five categories may, by construction, be used to:
    entity** (a credibility score, a regime-type classification, a
    propaganda rank, a trustworthiness rating). This is the
    `:country-or-outlet-verdict` HARD gate (`mikurabe.governor`) — see
-   `test/mikurabe/governor_poisoned_fixture_test.clj` for the structural
+   `test/mikurabe/governor_poisoned_fixture_test.cljk` for the structural
    proof that a field shaped like this is refused even if an advisor tries
    to attach one. It mirrors ooyake's G11 ("do not rank governments or take
    a political position — descriptive, neutral") exactly, made concrete

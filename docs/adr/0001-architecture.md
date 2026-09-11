@@ -132,7 +132,7 @@ allows:
    over-eager approval flow) can publish named-party content without the
    deployment's phase ALSO having been explicitly raised to 2 by whoever
    controls the actor's run context. See
-   `test/mikurabe/operation_test.clj`'s
+   `test/mikurabe/operation_test.cljk`'s
    `named-party-resume-approved-with-gate-closed-still-holds`.
 
 8. **The default phase is 0 (observe) — more conservative than

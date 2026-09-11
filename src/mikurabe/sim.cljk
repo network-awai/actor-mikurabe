@@ -48,7 +48,7 @@
 (defn- poisoned-advisor
   "Proof case (c): a proposal that tries to smuggle in a standing
   country/outlet credibility-score-shaped field. This is exactly the shape
-  `test/mikurabe/governor_poisoned_fixture_test.clj` also proves against
+  `test/mikurabe/governor_poisoned_fixture_test.cljk` also proves against
   `mikurabe.governor/check` directly — the SAME governor function is what
   refuses it here, end-to-end through the whole StateGraph."
   []

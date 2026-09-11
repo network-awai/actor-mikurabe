@@ -76,7 +76,7 @@ intake → advise(narrative-llm) → govern(NarrativeGovernor) → decide ─┬
 - `:no-actuation` — proposal `:effect ≠ :assessment`.
 - `:uncited-conclusive` — an observation with < 2 distinct compared-item citations (no exception — unlike tashikame's `:unverifiable` escape hatch, mikurabe has none).
 - `:malformed-citation` — a cite that does not reference one of the input cluster's own item-ids (mikurabe cannot cite anything it wasn't handed).
-- `:country-or-outlet-verdict` — **THE MOST IMPORTANT GATE.** ANY field shaped like a standing country/government/outlet credibility score, regime-type label, propaganda rank, or trustworthiness rating. Structurally scanned, not just documented — see `test/mikurabe/governor_poisoned_fixture_test.clj`. Mirrors ooyake's G11 exactly.
+- `:country-or-outlet-verdict` — **THE MOST IMPORTANT GATE.** ANY field shaped like a standing country/government/outlet credibility score, regime-type label, propaganda rank, or trustworthiness rating. Structurally scanned, not just documented — see `test/mikurabe/governor_poisoned_fixture_test.cljk`. Mirrors ooyake's G11 exactly.
 - `:event-truth-verdict` — any `:event/verdict`-shaped field. mikurabe never asserts what actually happened, only how differently it was described (mirrors kawaraban G1 + danjo G4).
 - `:person-targeting` — doxing/harassing a private person (institutional scrutiny of a state broadcaster's / government press office's own communications is in-bounds).
 - `:catastrophe-veto` — Rider §2 catastrophe-veto scan hit on observation text.
