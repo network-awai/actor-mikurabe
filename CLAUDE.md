@@ -75,7 +75,7 @@ positioning depends on.
   locally (repo-naming "no -clj suffix" convention, root CLAUDE.md). If you
   see stale sibling actors' deps.edn referencing the old path, that's a
   pre-existing gap in THOSE repos, not something to copy into new ones.
-- `clojure -M:lint` (clj-kondo, errors fail) / `clojure -M:dev:test`.
+- `kbb -M:lint` (clj-kondo, errors fail) / `kbb -M:dev:test`.
 - Adding a new `:technique` category: update `docs/methodNote.md` FIRST,
   then `mikurabe.governor/technique-enum`, then
   `lex/frameObservation.edn`'s enum — in that order (see
