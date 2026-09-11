@@ -16,17 +16,17 @@ real (the code, the tests, the structural gates) vs. what is not yet real
   functions. In particular, `:country-or-outlet-verdict` (the single most
   important gate) is a real recursive key-scan over the whole proposal,
   and is proven, not just documented — see
-  `test/mikurabe/governor_poisoned_fixture_test.clj`, which feeds it
+  `test/mikurabe/governor_poisoned_fixture_test.cljk`, which feeds it
   several deliberately-poisoned proposals and asserts each is refused.
 - **The named-party phase gate** (`mikurabe.phase`) and its two-lock
   design (an `:approved` resume is insufficient without the phase-2
   Council gate also being open) are real, tested logic — see
-  `test/mikurabe/operation_test.clj`'s
+  `test/mikurabe/operation_test.cljk`'s
   `named-party-resume-approved-with-gate-closed-still-holds`.
 - **The Store contract** — `MemStore` and `DatomicStore` (via
   `langchain.db`'s in-process EAVT `:db-api`) are both real
   implementations, proven to agree by
-  `test/mikurabe/store_contract_test.clj`. `DatomicStore` has never been
+  `test/mikurabe/store_contract_test.cljk`. `DatomicStore` has never been
   pointed at a real Datomic/kotoba-server pod from this repo — that is a
   configuration-only swap (`langchain.kotoba-db/kotoba-api` instead of
   `langchain.db/api`), not a code change, but it has not been exercised.
@@ -40,7 +40,7 @@ real (the code, the tests, the structural gates) vs. what is not yet real
 - **The `:technique` taxonomy** (`docs/methodNote.md`) is a real,
   versioned document, and `mikurabe.governor/technique-enum` is the real
   single source of truth both the governor and the lexicon derive from —
-  this is not aspirational, `test/mikurabe/advisor_test.clj` checks every
+  this is not aspirational, `test/mikurabe/advisor_test.cljk` checks every
   mock-advisor-emitted technique is a member.
 
 ## What is MOCK / NOT YET REAL at R0
@@ -70,7 +70,7 @@ real (the code, the tests, the structural gates) vs. what is not yet real
 - **No named-party report has ever been published, anywhere, by anyone.**
   The default phase is 0 (observe); even the resume/approval StateGraph
   wiring that WOULD allow a phase-2 publish has only ever been exercised
-  against fixture data in `test/mikurabe/operation_test.clj` and
+  against fixture data in `test/mikurabe/operation_test.cljk` and
   `mikurabe.sim` — never against a real Council decision.
 - **RAD identity / manifest / west registration** — this repo does not
   itself register mikurabe into `etzhayyim/root`'s RAD identity ledger

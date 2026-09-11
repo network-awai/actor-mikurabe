@@ -33,7 +33,7 @@
                                EXACTLY, made concrete for narrative
                                comparison. THE MOST IMPORTANT GATE — see
                                `entity-verdict-keys` below and
-                               `test/mikurabe/governor_poisoned_fixture_test.clj`
+                               `test/mikurabe/governor_poisoned_fixture_test.cljk`
                                for the structural proof.
     :event-truth-verdict      ANY `:event/verdict`-shaped field — mikurabe
                                never asserts what actually happened in the
@@ -106,7 +106,7 @@
 ;; standing opinion about a country/government/outlet AS AN ENTITY (rather
 ;; than about ONE topic-cluster's framing) is refused. This is a structural
 ;; scan over every map key in the proposal, not a docstring promise — see
-;; `test/mikurabe/governor_poisoned_fixture_test.clj` for the proof that a
+;; `test/mikurabe/governor_poisoned_fixture_test.cljk` for the proof that a
 ;; deliberately-poisoned proposal (a fabricated country-ranking field) is
 ;; actually held.
 

@@ -26,7 +26,7 @@ rank, a trustworthiness rating — anything that persists an opinion about a
 SOURCE rather than about ONE topic-cluster's framing). This is enforced
 structurally by `mikurabe.governor/entity-verdict-keys`, a recursive scan
 over every key in a proposal, and proven by
-`test/mikurabe/governor_poisoned_fixture_test.clj` — if you touch
+`test/mikurabe/governor_poisoned_fixture_test.cljk` — if you touch
 `mikurabe.governor`, re-run that test file specifically and confirm every
 poisoned-fixture case still fails to publish. This mirrors ooyake's G11
 ("do not rank governments or take a political position — descriptive,
