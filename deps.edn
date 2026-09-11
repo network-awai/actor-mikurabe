@@ -28,7 +28,7 @@
   :dev {:override-deps
         {io.github.kotoba-lang/langchain
          {:local/root "../../kotoba-lang/langchain"}}}
-  ;; clojure -M:dev:run → drive representative topic-cluster proposals
+  ;; kbb -M:dev:run → drive representative topic-cluster proposals
   ;; through the actor (mock advisor + mock publisher, no network)
   :run {:main-opts ["-m" "mikurabe.sim"]}
   :test {:extra-paths ["test"]

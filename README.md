@@ -121,9 +121,9 @@ require the same open-method publication discipline before use.
 ## Run
 
 ```bash
-clojure -M:lint          # clj-kondo, errors fail
-clojure -M:dev:test      # cognitect test-runner (canonical)
-clojure -M:dev:run       # offline demo (5 representative proposals + resume demo, mock publisher)
+kbb -M:lint          # clj-kondo, errors fail
+kbb -M:dev:test      # cognitect test-runner (canonical)
+kbb -M:dev:run       # offline demo (5 representative proposals + resume demo, mock publisher)
 ```
 
 ## Related files

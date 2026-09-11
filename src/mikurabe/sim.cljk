@@ -1,7 +1,7 @@
 (ns mikurabe.sim
   "Offline demo: drive five representative topic-cluster proposals through
   the mikurabe actor on a MemStore + mock advisor + mock publisher (no
-  network). `clojure -M:dev:run`.
+  network). `kbb -M:dev:run`.
 
   (a) well-cited, non-named-party technique observation → commit
   (b) under-cited observation (< 2 cites)                → HARD hold :uncited-conclusive
