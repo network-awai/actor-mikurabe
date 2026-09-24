@@ -22,7 +22,7 @@
   Publisher is `mikurabe.publisher/mock-publisher`; nothing calls
   `load-or-create-identity!`/`mint` unless an operator explicitly wires
   `mikurabe.aozora/aozora-publisher` in — see README/MATURITY."
-  (:require [kotoba.lang.edn :as edn]
+  (:require [kotoba.io :as kio] [kotoba.lang.edn :as edn]
             [kotoba.lang.text :as str])
   (:import [java.security KeyPairGenerator MessageDigest Signature KeyFactory]
            [java.security.spec PKCS8EncodedKeySpec X509EncodedKeySpec]
@@ -195,12 +195,12 @@
   generate + persist one on first run (only the b64 key material is stored).
   Returns {:private-key :public-key :did :graph …}."
   [path]
-  (let [f (java.io.File. ^String path)]
-    (if (.exists f)
+  (let [f (kio/file ^String path)]
+    (if (kio/exists? f)
       (load-identity (edn/read-string (slurp f)))
       (let [id (generate-identity)
-            parent (.getParentFile (.getAbsoluteFile f))]
-        (when parent (.mkdirs parent))
+            parent (kio/parent-file (kio/absolute-file f))]
+        (when parent (kio/mkdirs parent))
         (spit f (pr-str (select-keys id [:private-b64 :public-b64])))
         id))))
 
