@@ -32,7 +32,7 @@
                       :confidence 0..1}]
      :effect      :assessment   ; mikurabe only ever assesses, never actuates
      :confidence  0..1}"
-  (:require [clojure.set :as set]
+  (:require [kotoba.lang.coll :as set]
             [kotoba.lang.text :as str]))
 
 (defprotocol Advisor
