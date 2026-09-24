@@ -4,7 +4,7 @@
   cluster no-ops cleanly, and the two-lock named-party resume path (an
   :approved resume only actually publishes when the phase-2 Council gate is
   ALSO open — approval alone is not sufficient)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [mikurabe.advisor :as advisor]
             [mikurabe.operation :as op]

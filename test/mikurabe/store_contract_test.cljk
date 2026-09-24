@@ -3,7 +3,7 @@
   ledger facts appear regardless of backend (in-process EAVT today;
   kotoba-server pod tomorrow). mikurabe's analog of
   tashikame.store-contract-test / yosoku's store parity test."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [mikurabe.store :as store]))
 
 (deftest mem-and-datomic-agree-on-commit-and-ledger

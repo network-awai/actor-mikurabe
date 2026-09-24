@@ -6,7 +6,7 @@
   catastrophe-veto / person-targeting / uncited-conclusive /
   malformed-citation / country-or-outlet-verdict / event-truth-verdict /
   no-actuation proposals are HELD (recorded as a hold, never published)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [mikurabe.advisor :as advisor]
             [mikurabe.operation :as op]

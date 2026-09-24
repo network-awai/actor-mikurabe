@@ -2,7 +2,7 @@
   "Phase 0→1→2 semantics + named-party detection, in isolation from the
   full StateGraph (mirrors the isolated-governor-test convention yosoku's
   README describes)."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [mikurabe.phase :as phase]))
 
 (def items

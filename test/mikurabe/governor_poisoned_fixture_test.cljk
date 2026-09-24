@@ -13,7 +13,7 @@
   that plants a per-country/per-outlet credibility/rank/regime-type field,
   the ooyake-G11-mirroring guarantee this whole actor exists to keep has
   silently regressed."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [mikurabe.governor :as governor]))
 
 (def ^:private cluster-request

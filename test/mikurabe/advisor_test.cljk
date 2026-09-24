@@ -5,7 +5,7 @@
   every technique in the published enum, never a poisoned entity-verdict
   field) and must never invent a citation to something outside its input."
   (:require [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is testing]]
+            [kotoba.test :refer [deftest is testing]]
             [mikurabe.advisor :as advisor]
             [mikurabe.governor :as governor]))
 
