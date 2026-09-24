@@ -3,7 +3,7 @@
   not .sh — per etzhayyim/root CLAUDE.md; mirrors tashikame's own
   run_tests.cljk). Canonical path: `kbb -M:dev:test` (cognitect
   test-runner). This runner: `kbb -M -m mikurabe.run-tests`."
-  (:require [clojure.test :refer [run-tests]]
+  (:require [kotoba.test :refer [run-tests]]
             [mikurabe.governor-contract-test]
             [mikurabe.governor-poisoned-fixture-test]
             [mikurabe.store-contract-test]
