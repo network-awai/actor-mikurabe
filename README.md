@@ -131,5 +131,5 @@ kbb -M:dev:run       # offline demo (5 representative proposals + resume demo, m
 - `docs/adr/0001-architecture.md` — design 正本.
 - `docs/methodNote.md` — the open, versioned `:technique` taxonomy.
 - `../../../90-docs/adr/2607197800-...edn` — superproject ADR (authoritative spec for this actor).
-- `CLAUDE.md` — repo invariants / conventions.
+- `AGENTS.md` — repo invariants / conventions.
 - `MATURITY.md` — honest R0 status: what is real vs. mocked.

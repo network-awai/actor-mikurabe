@@ -1,7 +1,7 @@
 # com-etzhayyim-mikurabe
 
 mikurabe (見比べ) — comparative narrative-framing observer. See `README.md`
-for the core contract and full-repo `../../../CLAUDE.md` "Actors" section
+for the core contract and full-repo `../../../AGENTS.md` "Actors" section
 for the pattern this follows (containment + independent governor +
 append-only ledger). Superproject decision record:
 `../../../90-docs/adr/2607197800-mikurabe-world-state-media-narrative-comparison-plus-kawaraban-kouhou-world-scope.edn`.
@@ -72,7 +72,7 @@ positioning depends on.
   (the current canonical coordinates), NOT the older
   `com-junkawasaki/langgraph-clj`/`langchain-clj` paths tashikame's and
   yosoku's own `deps.edn` still reference — those checkouts are retired
-  locally (repo-naming "no -clj suffix" convention, root CLAUDE.md). If you
+  locally (repo-naming "no -clj suffix" convention, root AGENTS.md). If you
   see stale sibling actors' deps.edn referencing the old path, that's a
   pre-existing gap in THOSE repos, not something to copy into new ones.
 - `kbb -M:lint` (clj-kondo, errors fail) / `kbb -M:dev:test`.
