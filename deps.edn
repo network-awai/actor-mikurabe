@@ -9,7 +9,7 @@
  ;; locally (see `.git/orphan-retire-archive-20260717/
  ;; orgs_com-junkawasaki_langgraph-clj.meta.txt`: "class=successor-leftover
  ;; maps_to=orgs/kotoba-lang/langgraph"). The repo itself was renamed/moved
- ;; to `kotoba-lang/langgraph` (root CLAUDE.md "Repo naming — no -clj
+ ;; to `kotoba-lang/langgraph` (root AGENTS.md "Repo naming — no -clj
  ;; suffix"); GitHub confirms `com-junkawasaki/langgraph-clj` now redirects
  ;; to `kotoba-lang/langgraph`. mikurabe is a NEW registration, so it points
  ;; at the CURRENT canonical coordinates instead of perpetuating the stale

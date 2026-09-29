@@ -30,7 +30,7 @@ existing actor:
 - **danjo G4** (non-adjudicating) — danjo's entire discipline is scoped to
   PRE-PUBLISHED OPEN GOVERNMENT DATA (Diet records / procurement / budgets),
   not live news media; conflating the two corpora would blur a
-  constitutionally clean boundary danjo's own CLAUDE.md is emphatic about.
+  constitutionally clean boundary danjo's own AGENTS.md is emphatic about.
 - **ooyake G11** ("do not rank governments or take a political position —
   descriptive, neutral") — a standing per-country or per-outlet
   credibility/propaganda score is EXACTLY what G11 exists to make

@@ -1,6 +1,6 @@
 (ns mikurabe.run-tests
   "Test runner for com-etzhayyim-mikurabe (new actors ship run_tests.cljk,
-  not .sh — per etzhayyim/root CLAUDE.md; mirrors tashikame's own
+  not .sh — per etzhayyim/root AGENTS.md; mirrors tashikame's own
   run_tests.cljk). Canonical path: `kbb -M:dev:test` (cognitect
   test-runner). This runner: `kbb -M -m mikurabe.run-tests`."
   (:require [kotoba.test :refer [run-tests]]
